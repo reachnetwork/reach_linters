@@ -3,7 +3,10 @@ namespace :reach_linters do
   task :setup do
     Bundler.with_clean_env do
       os = :os_x
-      print "Checking for package manager..."
+
+      `sudo ls` # just want to get the sudo password out of the way for prettier output later :)
+
+      print "\nChecking for package manager..."
       begin
         `brew list`
         print " Homebrew found!"
@@ -42,7 +45,18 @@ namespace :reach_linters do
         print "\n INSTALLING..."
         `sudo npm install -g csslint`
         unless `sudo npm -g list`.include?('csslint')
-          raise 'Failed to install CSSLint!'
+          print ' FAILED!'
+        end
+      end
+
+      print "\nChecking for ESLint..."
+      if `sudo npm -g list`.include?('eslint')
+        print " FOUND, skipping..."
+      else
+        print "\n INSTALLING..."
+        `sudo npm install -g eslint`
+        unless `sudo npm -g list`.include?('eslint')
+          print ' FAILED!'
         end
       end
 
