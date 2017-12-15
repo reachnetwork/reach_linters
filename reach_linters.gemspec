@@ -20,4 +20,5 @@ Gem::Specification.new do |s|
 
   s.add_development_dependency "guard-brakeman"
   s.add_development_dependency "guard-bundler-audit"
+  s.add_development_dependency "rubocop"
 end
