@@ -42,42 +42,19 @@ namespace :reach_linters do
         # TODO : handle error checking for this...
       end
 
-      print "\nChecking for PostCSS..."
-      if `sudo npm -g list`.include?('postcss')
-        print " FOUND, skipping..."
-      else
-        print "\n INSTALLING..."
-        `sudo npm install -g postcss`
-        if `sudo npm -g list`.include?('postcss')
-          print " FINISHED!"
+      ['PostCSS', 'StyleLint', 'ESLint'].each do |lib_name|
+        print "\nChecking for #{lib_name}..."
+        lib = lib_name.downcase
+        if `sudo npm -g list`.include?(lib)
+          print " FOUND, skipping..."
         else
-          print ' FAILED!'
-        end
-      end
-
-      print "\nChecking for StyleLint..."
-      if `sudo npm -g list`.include?('stylelint')
-        print " FOUND, skipping..."
-      else
-        print "\n INSTALLING..."
-        `sudo npm install -g stylelint`
-        if `sudo npm -g list`.include?('stylelint')
-          print " FINISHED!"
-        else
-          print ' FAILED!'
-        end
-      end
-
-      print "\nChecking for ESLint..."
-      if `sudo npm -g list`.include?('eslint')
-        print " FOUND, skipping..."
-      else
-        print "\n INSTALLING..."
-        `sudo npm install -g eslint`
-        if `sudo npm -g list`.include?('eslint')
-          print " FINISHED!"
-        else
-          print ' FAILED!'
+          print "\n INSTALLING..."
+          `sudo npm install -g #{lib}`
+          if `sudo npm -g list`.include?(lib)
+            print " FINISHED!"
+          else
+            print ' FAILED!'
+          end
         end
       end
 
