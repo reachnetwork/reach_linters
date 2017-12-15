@@ -29,7 +29,9 @@ namespace :reach_linters do
         else
           print "\n INSTALLING..."
           `brew install node`
-          unless `brew list`.include?('node')
+          if `brew list`.include?('node')
+            print " FINISHED!"
+          else
             raise 'Failed to install package manager!'
           end
         end
@@ -38,13 +40,28 @@ namespace :reach_linters do
         # TODO : handle error checking for this...
       end
 
-      print "\nChecking for CSSLint..."
-      if `sudo npm -g list`.include?('csslint')
+      print "\nChecking for PostCSS..."
+      if `sudo npm -g list`.include?('postcss')
         print " FOUND, skipping..."
       else
         print "\n INSTALLING..."
-        `sudo npm install -g csslint`
-        unless `sudo npm -g list`.include?('csslint')
+        `sudo npm install -g postcss`
+        if `sudo npm -g list`.include?('postcss')
+          print " FINISHED!"
+        else
+          print ' FAILED!'
+        end
+      end
+
+      print "\nChecking for StyleLint..."
+      if `sudo npm -g list`.include?('stylelint')
+        print " FOUND, skipping..."
+      else
+        print "\n INSTALLING..."
+        `sudo npm install -g stylelint`
+        if `sudo npm -g list`.include?('stylelint')
+          print " FINISHED!"
+        else
           print ' FAILED!'
         end
       end
@@ -55,7 +72,9 @@ namespace :reach_linters do
       else
         print "\n INSTALLING..."
         `sudo npm install -g eslint`
-        unless `sudo npm -g list`.include?('eslint')
+        if `sudo npm -g list`.include?('eslint')
+          print " FINISHED!"
+        else
           print ' FAILED!'
         end
       end
