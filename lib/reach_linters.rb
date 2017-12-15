@@ -1,0 +1,3 @@
+module ReachLinters
+  # Your code goes here...
+end
