@@ -6,7 +6,7 @@ require "reach_linters/version"
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
   s.name        = "reach_linters"
-  s.version     = ReachLinter::VERSION
+  s.version     = ReachLinters::VERSION
   s.authors     = ["Gustav E Gennrich"]
   s.email       = ["devs@sreducationgroup.org"]
   s.homepage    = "https://www.sreducationgroup.org"
@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", "~> 5.1.4"
+  s.add_dependency "rails", '> 4.0'
 
   s.add_development_dependency "guard-brakeman"
   s.add_development_dependency "guard-bundler-audit"
