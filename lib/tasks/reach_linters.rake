@@ -42,7 +42,7 @@ namespace :reach_linters do
         # TODO : handle error checking for this...
       end
 
-      ['PostCSS', 'StyleLint', 'ESLint', 'JSHint'].each do |lib_name|
+      ['PostCSS', 'StyleLint', 'ESLint'].each do |lib_name|
         print "\nChecking for #{lib_name}..."
         lib = lib_name.downcase
         if `sudo npm -g list`.include?(lib)
