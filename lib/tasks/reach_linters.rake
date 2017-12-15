@@ -1,6 +1,6 @@
 namespace :reach_linters do
   desc 'Installs various components needed for the linters'
-  task :setup do
+  task :system_setup do
     Bundler.with_clean_env do
       os = :os_x
 
@@ -13,10 +13,11 @@ namespace :reach_linters do
       rescue Errno::ENOENT => e
         os = :linux
         begin
-          exec 'sudo apt-get'
+          `sudo apt-get`
           print " Apt-Get found!"
         rescue Errno::ENOENT => e
-          raise 'Make sure a package manager is installed! (Homebrew on OSX, Apt-Get on Linux)'
+          puts "\n\nERROR: Make sure a package manager is installed! (Homebrew on OSX, Apt-Get on Linux)"
+          return
         end
       end
 
@@ -32,7 +33,8 @@ namespace :reach_linters do
           if `brew list`.include?('node')
             print " FINISHED!"
           else
-            raise 'Failed to install package manager!'
+            puts "\n\nERROR: Failed to install package manager!"
+            return
           end
         end
       when :linux
