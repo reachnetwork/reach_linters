@@ -1568,7 +1568,7 @@ Style/EmptyElse:
 
 Style/EmptyLambdaParameter:
   Description: 'Omit parens for empty lambda parameters.'
-  Enabled: true
+  Enabled: false
 
 Style/EmptyLiteral:
   Description: 'Prefer literals to Array.new/Hash.new/String.new.'
@@ -1682,9 +1682,9 @@ Style/InverseMethods:
   Enabled: true
 
 Style/Lambda:
-  Description: 'Use the new lambda literal syntax for single-line blocks.'
+  Description: 'Use the new lambda literal syntax for multi-line blocks.'
   StyleGuide: '#lambda-multi-line'
-  Enabled: true
+  Enabled: false
 
 Style/LambdaCall:
   Description: 'Use lambda.call(...) instead of lambda.(...).'
