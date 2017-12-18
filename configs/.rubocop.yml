@@ -1699,7 +1699,7 @@ Style/MethodDefParentheses:
                  Checks if the method definitions have or don't have
                  parentheses.
   StyleGuide: '#method-parens'
-  Enabled: true
+  Enabled: false
 
 Style/MethodMissing:
   Description: 'Avoid using `method_missing`.'
