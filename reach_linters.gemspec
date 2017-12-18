@@ -18,7 +18,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", '> 4.0'
 
-  s.add_development_dependency "guard-brakeman"
-  s.add_development_dependency "guard-bundler-audit"
-  s.add_development_dependency "rubocop"
+  s.add_dependency "guard-brakeman"
+  s.add_dependency "guard-bundler-audit"
+  s.add_dependency "rubocop"
 end

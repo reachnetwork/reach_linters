@@ -4,5 +4,6 @@ end
 
 require 'guard-brakeman'
 require 'guard-bundler-audit'
+require 'rubocop'
 
 require "reach_linters/railtie" if defined?(Rails)
