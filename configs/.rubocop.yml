@@ -1940,7 +1940,7 @@ Style/RedundantSelf:
 Style/RegexpLiteral:
   Description: 'Use / or %r around regular expressions.'
   StyleGuide: '#percent-r'
-  Enabled: true
+  Enabled: false
 
 Style/RescueModifier:
   Description: 'Avoid using rescue in its modifier form.'
