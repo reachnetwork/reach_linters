@@ -27,7 +27,7 @@ Layout/FirstMethodParameterLineBreak:
 Layout/MultilineAssignmentLayout:
   Description: 'Check for a newline after the assignment operator in multi-line assignments.'
   StyleGuide: '#indent-conditional-assignment'
-  Enabled: true
+  Enabled: false
 
 # By default, the rails cops are not run. Override in project or home
 # directory .rubocop.yml files, or by giving the -R/--rails option.
@@ -879,7 +879,7 @@ Metrics/AbcSize:
                  A calculated magnitude based on number of assignments,
                  branches, and conditions.
   Reference: 'http://c2.com/cgi/wiki?AbcMetric'
-  Enabled: true
+  Enabled: false
 
 Metrics/BlockLength:
   Description: 'Avoid long blocks with many lines.'
@@ -901,6 +901,7 @@ Metrics/CyclomaticComplexity:
                  A complexity metric that is strongly correlated to the number
                  of test cases needed to validate a method.
   Enabled: true
+  Max: 15
 
 Metrics/LineLength:
   Description: 'Limit lines to 80 characters.'
@@ -930,6 +931,7 @@ Metrics/PerceivedComplexity:
                  A complexity metric geared towards measuring complexity for a
                  human reader.
   Enabled: true
+  Max: 15
 
 #################### Naming ##############################
 
