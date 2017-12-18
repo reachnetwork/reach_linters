@@ -1989,8 +1989,7 @@ Style/SingleLineMethods:
 Style/SpecialGlobalVars:
   Description: 'Avoid Perl-style global variables.'
   StyleGuide: '#no-cryptic-perlisms'
-  Enabled: true
-  Disable: [:$LOAD_PATH]
+  Enabled: false
 
 Style/StabbyLambdaParentheses:
   Description: 'Check for the usage of parentheses around stabby lambda arguments.'
