@@ -1,3 +1,9 @@
+AllCops:
+  Exclude:
+    - 'bin/**'
+    - 'db/**/*'
+    - 'script/**/*'
+    - 'Guardfile'
 # These are all the cops that are disabled in the default configuration.
 
 Layout/FirstArrayElementLineBreak:
