@@ -3,9 +3,9 @@ class ReachLinters::ConfigsGenerator < Rails::Generators::Base
 
   def copy_config_files
     config_files = [
-      {source: 'rubocop.yml', target: '.rubocop.yml'},
-      {source: 'eslintrc.yml', target: '.eslintrc.yml'},
-      {source: 'stylelintrc', target: '.stylelintrc'}
+      {source: 'rubocop.yml', target: '~/.rubocop.yml'},
+      {source: 'eslintrc.yml', target: '~/.eslintrc.yml'},
+      {source: 'stylelintrc', target: '~/.stylelintrc'}
     ]
 
     config_files.each do |file|
