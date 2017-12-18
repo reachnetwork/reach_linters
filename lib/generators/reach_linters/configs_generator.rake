@@ -9,7 +9,7 @@ class ReachLinters::ConfigsGenerator < Rails::Generators::Base
     ]
 
     config_files.each do |file|
-      if File.exists?(file[:target])
+      if File.exist?(file[:target])
         say set_color("NOTE: File #{file[:target]} already exists.", :blue)
         next
       end
