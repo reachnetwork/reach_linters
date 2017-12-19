@@ -226,7 +226,7 @@ Layout/DotPosition:
   Description: 'Checks the position of the dot in multi-line method calls.'
   StyleGuide: '#consistent-multi-line-chains'
   Enabled: true
-  EnforcedStyle: "trailing" 
+  EnforcedStyle: "trailing"
 
 Layout/ElseAlignment:
   Description: 'Align elses and elsifs correctly.'
@@ -427,7 +427,7 @@ Layout/SpaceAroundEqualsInParameterDefault:
                  configuration.
   StyleGuide: '#spaces-around-equals'
   Enabled: true
-  EnforcedStyle: space
+  EnforcedStyle: no_space
 
 Layout/SpaceAroundKeyword:
   Description: 'Use a space around keywords if appropriate.'
@@ -442,8 +442,7 @@ Layout/SpaceBeforeBlockBraces:
   Description: >-
                  Checks that the left block brace has or doesn't have space
                  before it.
-  Enabled: true
-  EnforcedStyle: space
+  Enabled: false
 
 Layout/SpaceBeforeComma:
   Description: 'No spaces before commas.'
