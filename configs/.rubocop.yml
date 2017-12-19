@@ -231,6 +231,7 @@ Layout/DotPosition:
 Layout/ElseAlignment:
   Description: 'Align elses and elsifs correctly.'
   Enabled: true
+  EnforcedStyleAlignWith: variable
 
 Layout/EmptyLineAfterMagicComment:
   Description: 'Add an empty line after magic comments to separate them from code.'
@@ -625,6 +626,7 @@ Lint/EmptyWhen:
 Lint/EndAlignment:
   Description: 'Align ends correctly.'
   Enabled: true
+  EnforcedStyleAlignWith: variable
 
 Lint/EndInMethod:
   Description: 'END blocks should not be placed inside method definitions.'
