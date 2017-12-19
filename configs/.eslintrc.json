@@ -1,8 +1,7 @@
 {
   "env": {
     "browser": true,
-    "jquery": true,
-    "es6": true
+    "jquery": true
   },
   "extends": "eslint:recommended",
   "rules": {
@@ -152,7 +151,7 @@
       "off"
     ],
     "object-shorthand": [
-      "error"
+      "off" // es6
     ],
     "computed-property-spacing": [
       "error"
