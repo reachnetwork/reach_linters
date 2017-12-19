@@ -231,7 +231,6 @@ Layout/DotPosition:
 Layout/ElseAlignment:
   Description: 'Align elses and elsifs correctly.'
   Enabled: true
-  EnforcedStyleAlignWith: variable
 
 Layout/EmptyLineAfterMagicComment:
   Description: 'Add an empty line after magic comments to separate them from code.'
