@@ -4,7 +4,10 @@
     "jquery": true
   },
   "globals": {
-    "_": false
+    "_": false,
+    "Backbone": false,
+    "ace": false,
+    "ghosts": false
   },
   "extends": "eslint:recommended",
   "rules": {
