@@ -122,7 +122,7 @@
     "selector-max-type": 2,
     "selector-max-universal": 0,
     "selector-nested-pattern": "",
-    "selector-no-qualifying-type": [true, "ignore": ["attribute", "class", "id"]],
+    "selector-no-qualifying-type": [true, {"ignore": ["attribute", "class", "id"]}],
     "selector-no-vendor-prefix": true,
     "selector-pseudo-class-blacklist": [],
     "selector-pseudo-class-case": "lower",
