@@ -2,33 +2,37 @@ namespace :reach_linters do
   desc 'Installs various components needed for the linters'
   task :system_setup do
     Bundler.with_clean_env do
-      `sudo ls` # just want to get the sudo password out of the way for prettier output later :)
-
-      print "\nChecking for Homebrew..."
-      begin
-        r = `brew list`
-        raise "\nHomebrew not found!" if r.nil? || r.include?('No such file or directory')
-        print " FOUND!"
-      rescue StandardError => e
-        print e.message
-        puts "\n\nINSTALLATION FAILED!"
-        exit
-      end
-
-      print "\n\nUpdating Homebrew..."
-      `brew update`
-      print " DONE!"
-
-      install_node
-
-      install_linters
-
-      puts "\n\nSETUP COMPLETE!"
+      do_installation
     end
   end
 end
 
 private
+
+def do_installation
+  `sudo ls` # just want to get the sudo password out of the way for prettier output later :)
+
+  print "\nChecking for Homebrew..."
+  begin
+    r = `brew list`
+    raise "\nHomebrew not found!" if r.nil? || r.include?('No such file or directory')
+    print " FOUND!"
+  rescue StandardError => e
+    print e.message
+    puts "\n\nINSTALLATION FAILED!"
+    exit
+  end
+
+  print "\n\nUpdating Homebrew..."
+  `brew update`
+  print " DONE!"
+
+  install_node
+
+  install_linters
+
+  puts "\n\nSETUP COMPLETE!"
+end
 
 def install_node
   print "\n\nChecking for Node..."
