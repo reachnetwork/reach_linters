@@ -45,7 +45,6 @@
     "declaration-property-value-blacklist": {},
     "font-family-name-quotes": "always-unless-keyword",
     "font-family-no-duplicate-names": true,
-    "font-family-no-missing-generic-family-keyword": true,
     "font-weight-notation": "named-where-possible",
     "function-blacklist": [],
     "function-calc-no-unspaced-operator": true,
