@@ -189,7 +189,7 @@
       "off"
     ],
     "id-length": [
-      "error",
+      "off",
       {
         "min": 1,
         "max": 20
