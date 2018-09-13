@@ -1698,7 +1698,12 @@ Style/MethodDefParentheses:
   StyleGuide: '#method-parens'
   Enabled: false
 
-Style/MethodMissing:
+Style/MethodMissingSuper:
+  Description: 'Avoid using `method_missing`.'
+  StyleGuide: '#no-method-missing'
+  Enabled: false
+
+Style/MissingRespondToMissing:
   Description: 'Avoid using `method_missing`.'
   StyleGuide: '#no-method-missing'
   Enabled: false
