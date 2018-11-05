@@ -2,13 +2,22 @@
   "env": {
     "browser": true,
     "jquery": true,
+    "node": true,
     "es6": true
   },
   "globals": {
     "_": false,
     "Backbone": false,
+    "Polymer": false,
+    "ChimeraWidget": false,
+    "Modernizr": false,
+    "Blazy": false,
     "ace": false,
-    "ghosts": false
+    "ghosts": false,
+    "module": false
+  },
+  "parserOptions": {
+    "sourceType": "module"
   },
   "extends": "eslint:recommended",
   "rules": {
@@ -189,10 +198,10 @@
       "off"
     ],
     "id-length": [
-      "off",
+      "error",
       {
         "min": 1,
-        "max": 20
+        "max": 25
       }
     ],
     "use-isnan": [
@@ -233,7 +242,7 @@
       "error"
     ],
     "no-underscore-dangle": [
-      "error"
+      "off"
     ],
     "no-extend-native": [
       "error"
@@ -312,6 +321,10 @@
     ],
     "no-unused-expressions": [
       "error"
+    ],
+    "no-unused-vars": [
+      "error",
+      {"argsIgnorePattern": "^_"}
     ],
     "no-warning-comments": [
       "error"
