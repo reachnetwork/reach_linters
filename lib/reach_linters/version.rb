@@ -1,3 +1,3 @@
 module ReachLinters
-  VERSION = '2018.10.16.rev0'.freeze
+  VERSION = '2018.11.15.rev0'.freeze
 end
