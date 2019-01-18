@@ -79,7 +79,8 @@
     "media-query-list-comma-newline-before": "never-multi-line",
     "media-query-list-comma-space-after": "always",
     "media-query-list-comma-space-before": "never",
-    "no-descending-specificity": true,
+    /* This rule is broken: https://github.com/stylelint/stylelint/issues/2489 */
+    // "no-descending-specificity": true,
     "no-duplicate-selectors": true,
     "no-empty-source": true,
     "no-eol-whitespace": true,
