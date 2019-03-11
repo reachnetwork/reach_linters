@@ -136,7 +136,6 @@
     "new-cap": "warn",
     "new-parens": "warn",
     "no-array-constructor": "warn",
-    "no-continue": "warn",
     "no-lonely-if": "warn",
     "no-mixed-operators": "warn",
     "no-mixed-spaces-and-tabs": "warn",
@@ -184,7 +183,6 @@
     "no-mixed-requires": "error",
     "no-new-require": "error",
     "no-path-concat": "error",
-    "no-process-env": "error",
     "no-process-exit": "error",
     "no-sync": "error"
   }
