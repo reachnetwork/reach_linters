@@ -3,5 +3,6 @@ module ReachLinters
 end
 
 require 'rubocop'
+require 'rubocop-rails'
 
 require "reach_linters/railtie" if defined?(Rails)

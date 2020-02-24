@@ -1,4 +1,4 @@
-$:.push File.expand_path("../lib", __FILE__)
+$:.push File.expand_path('lib', __dir__)
 
 # Maintain your gem's version:
 require "reach_linters/version"
@@ -18,5 +18,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency "guard-brakeman"
   s.add_dependency "guard-bundler-audit"
-  s.add_dependency "rubocop", "~> 0.60.0"
+  s.add_dependency "rubocop", "~> 0.80.0"
+  s.add_dependency "rubocop-rails"
 end
