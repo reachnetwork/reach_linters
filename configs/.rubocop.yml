@@ -323,7 +323,7 @@ Layout/DotPosition:
 
 Layout/ElseAlignment:
   Description: 'Align elses and elsifs correctly.'
-  Enabled: true
+  Enabled: false
   VersionAdded: '0.49'
 
 Layout/EmptyComment:
