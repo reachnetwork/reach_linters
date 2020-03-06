@@ -316,7 +316,7 @@ Layout/DotPosition:
   StyleGuide: '#consistent-multi-line-chains'
   Enabled: true
   VersionAdded: '0.49'
-  EnforcedStyle: leading
+  EnforcedStyle: trailing
   SupportedStyles:
     - leading
     - trailing
