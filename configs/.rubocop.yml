@@ -998,7 +998,7 @@ Layout/SpaceAroundEqualsInParameterDefault:
   StyleGuide: '#spaces-around-equals'
   Enabled: true
   VersionAdded: '0.49'
-  EnforcedStyle: space
+  EnforcedStyle: no_space
   SupportedStyles:
     - space
     - no_space
@@ -1463,7 +1463,7 @@ Lint/NonLocalExitFromIterator:
 
 Lint/NumberConversion:
   Description: 'Checks unsafe usage of number conversion methods.'
-  Enabled: true
+  Enabled: false
   VersionAdded: '0.53'
   VersionChanged: '0.70'
   SafeAutoCorrect: false
