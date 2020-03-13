@@ -2329,7 +2329,7 @@ Style/ClassAndModuleChildren:
   # manual oversight.
   SafeAutoCorrect: false
   AutoCorrect: false
-  Enabled: true
+  Enabled: false
   VersionAdded: '0.19'
   #
   # Basically there are two different styles:
