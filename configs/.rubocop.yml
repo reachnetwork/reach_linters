@@ -3472,7 +3472,7 @@ Style/RegexpLiteral:
     - mixed
   # If `false`, the cop will always recommend using `%r` if one or more slashes
   # are found in the regexp string.
-  AllowInnerSlashes: false
+  AllowInnerSlashes: true
 
 Style/RescueModifier:
   Description: 'Avoid using rescue in its modifier form.'
