@@ -5,12 +5,12 @@ AllCops:
     - ruby
     - rake
   Exclude:
-    - 'bin/**'
-    - 'db/**/*'
-    - 'script/**/*'
-    - 'node_modules/**/*'
-    - 'bower_components/**/*'
-    - 'Guardfile'
+    - '/**/bin/**'
+    - '/**/db/**/*'
+    - '/**/script/**/*'
+    - '/**/node_modules/**/*'
+    - '/**/bower_components/**/*'
+    - '/**/Guardfile'
   # Default formatter will be used if no `-f/--format` option is given.
   DefaultFormatter: progress
   # Cop names are displayed in offense messages by default. Change behavior
@@ -558,7 +558,7 @@ Layout/FirstHashElementIndentation:
   #
   # The value `align_braces` means that the indentation of the first key shall
   # always be relative to the position of the opening brace.
-  EnforcedStyle: special_inside_parentheses
+  EnforcedStyle: consistent
   SupportedStyles:
     - special_inside_parentheses
     - consistent
@@ -1037,6 +1037,8 @@ Layout/SpaceBeforeBlockBraces:
     - space
     - no_space
   VersionChanged: '0.52.1'
+  Exclude:
+    - '/**/spec/**/*'
 
 Layout/SpaceBeforeComma:
   Description: 'No spaces before commas.'
@@ -2046,7 +2048,7 @@ Naming/PredicateName:
   # Exclude Rspec specs because there is a strong convention to write spec
   # helpers in the form of `have_something` or `be_something`.
   Exclude:
-    - 'spec/**/*'
+    - '/**/spec/**/*'
 
 Naming/RescuedExceptionsVariableName:
   Description: 'Use consistent rescued exceptions variables naming.'
@@ -2523,16 +2525,16 @@ Style/Documentation:
   Enabled: false
   VersionAdded: '0.9'
   Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
+    - '/**/spec/**/*'
+    - '/**/test/**/*'
 
 Style/DocumentationMethod:
   Description: 'Checks for missing documentation comment for public methods.'
   Enabled: true
   VersionAdded: '0.43'
   Exclude:
-    - 'spec/**/*'
-    - 'test/**/*'
+    - '/**/spec/**/*'
+    - '/**/test/**/*'
   RequireForNonPublicMethods: false
 
 Style/DoubleCopDisableDirective:
@@ -2727,6 +2729,13 @@ Style/GuardClause:
   # needs to have to trigger this cop
   MinBodyLength: 1
 
+Style/HashEachMethods:
+  Description: 'Use Hash#each_key and Hash#each_value.'
+  StyleGuide: '#hash-each'
+  Enabled: false
+  VersionAdded: '0.80'
+  Safe: false
+
 Style/HashSyntax:
   Description: >-
                  Prefer Ruby 1.9 hash syntax { a: 1, b: 2 } over 1.8 syntax
@@ -2752,12 +2761,12 @@ Style/HashSyntax:
 
 Style/HashTransformKeys:
   Description: 'Prefer `transform_keys` over `each_with_object` and `map`.'
-  Enabled: 'pending'
+  Enabled: false
   Safe: false
 
 Style/HashTransformValues:
   Description: 'Prefer `transform_values` over `each_with_object` and `map`.'
-  Enabled: 'pending'
+  Enabled: false
   Safe: false
 
 Style/IdenticalConditionalBranches:
@@ -3240,7 +3249,7 @@ Style/NumericPredicate:
   # Exclude RSpec specs because assertions like `expect(1).to be > 0` cause
   # false positives.
   Exclude:
-    - 'spec/**/*'
+    - '/**/spec/**/*'
 
 Style/OneLineConditional:
   Description: >-
