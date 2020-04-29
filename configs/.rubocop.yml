@@ -1770,6 +1770,7 @@ Metrics/BlockLength:
     - refine
   Exclude:
     - '**/*.gemspec'
+    - '/**/spec/**/*'
 
 Metrics/BlockNesting:
   Description: 'Avoid excessive block nesting.'
@@ -3623,7 +3624,7 @@ Style/StringHashKeys:
 Style/StringLiterals:
   Description: 'Checks if uses of quotes match the configured preference.'
   StyleGuide: '#consistent-string-literals'
-  Enabled: false
+  Enabled: true
   VersionAdded: '0.9'
   VersionChanged: '0.36'
   EnforcedStyle: single_quotes
