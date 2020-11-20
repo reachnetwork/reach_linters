@@ -1180,7 +1180,7 @@ Layout/SpaceInsideStringInterpolation:
     - space
     - no_space
 
-Layout/Tab:
+Layout/IndentationStyle:
   Description: 'No hard tabs.'
   StyleGuide: '#spaces-indentation'
   Enabled: true
