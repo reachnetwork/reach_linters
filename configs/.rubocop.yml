@@ -1325,7 +1325,7 @@ Lint/EmptyWhen:
   Enabled: true
   VersionAdded: '0.45'
 
-Lint/EndInMethod:
+Style/EndBlock:
   Description: 'END blocks should not be placed inside method definitions.'
   Enabled: true
   VersionAdded: '0.9'
