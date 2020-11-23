@@ -1325,11 +1325,6 @@ Lint/EmptyWhen:
   Enabled: true
   VersionAdded: '0.45'
 
-Style/EndBlock:
-  Description: 'END blocks should not be placed inside method definitions.'
-  Enabled: true
-  VersionAdded: '0.9'
-
 Lint/EnsureReturn:
   Description: 'Do not use return in an ensure block.'
   StyleGuide: '#no-return-ensure'
@@ -1524,7 +1519,6 @@ Lint/RedundantRequireStatement:
 Lint/RedundantSplatExpansion:
   Description: 'Checks for splat unnecessarily being called on literals.'
   Enabled: true
-  VersionChanged: '0.76'
 
 Lint/RedundantStringCoercion:
   Description: 'Checks for Object#to_s usage in string interpolation.'
