@@ -1008,6 +1008,12 @@ Layout/SpaceAroundKeyword:
   Enabled: true
   VersionAdded: '0.49'
 
+Layout/SpaceAroundMethodCallOperator:
+  Description: "Checks method call operators to not have spaces around them."
+  StyleGuide: '#empty-lines-around-bodies'
+  Enabled: true
+  VersionAdded: '0.82'
+
 Layout/SpaceAroundOperators:
   Description: 'Use a single space around operators.'
   StyleGuide: '#spaces-operators'
@@ -1498,6 +1504,11 @@ Lint/RandOne:
   Enabled: true
   VersionAdded: '0.36'
 
+Lint/RaiseException:
+  Description: "This cop checks for raise or fail statements which are raising Exception class."
+  Enabled: true
+  VersionAdded: '0.81'
+
 Lint/RedundantCopDisableDirective:
   Description: >-
                  Checks for rubocop:disable comments that can be removed.
@@ -1617,7 +1628,6 @@ Lint/ShadowedArgument:
   VersionAdded: '0.52'
   IgnoreImplicitReferences: false
 
-
 Lint/ShadowedException:
   Description: >-
                   Avoid rescuing a higher level exception
@@ -1631,6 +1641,11 @@ Lint/ShadowingOuterLocalVariable:
                  for block arguments or block local variables.
   Enabled: true
   VersionAdded: '0.9'
+
+Lint/StructNewOverride:
+  Description: "This cop checks unexpected overrides of the Struct built-in methods via Struct.new."
+  Enabled: true
+  VersionAdded: '0.81'
 
 Lint/SuppressedException:
   Description: "Don't suppress exceptions."
@@ -2632,6 +2647,11 @@ Style/ExpandPathArguments:
   Description: "Use `expand_path(__dir__)` instead of `expand_path('..', __FILE__)`."
   Enabled: true
   VersionAdded: '0.53'
+
+Style/ExponentialNotation:
+  Description: "This cop enforces consistency when using exponential notation for numbers in the code."
+  Enabled: true
+  VersionAdded: '0.82'
 
 Style/FloatDivision:
   Description: 'For performing float division, coerce one side only.'
