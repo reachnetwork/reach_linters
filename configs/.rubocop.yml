@@ -1773,7 +1773,7 @@ Metrics/BlockLength:
   VersionChanged: '0.66'
   CountComments: false  # count full line comments?
   Max: 25
-  ExcludedMethods:
+  IgnoreMethods:
     # By default, exclude the `#refine` method, as it tends to have larger
     # associated blocks.
     - refine
@@ -1814,7 +1814,7 @@ Metrics/MethodLength:
   VersionChanged: '0.59.2'
   CountComments: false  # count full line comments?
   Max: 25
-  ExcludedMethods: []
+  IgnoreMethods: []
 
 Metrics/ModuleLength:
   Description: 'Avoid modules longer than 100 lines of code.'
