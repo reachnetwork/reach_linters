@@ -18,6 +18,6 @@ Gem::Specification.new do |s|
 
   s.add_dependency "guard-brakeman"
   s.add_dependency "guard-bundler-audit"
-  s.add_dependency "rubocop", "~> 1.61.1"
+  s.add_dependency "rubocop", "~> 1.6.1"
   s.add_dependency "rubocop-rails"
 end
