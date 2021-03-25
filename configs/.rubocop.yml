@@ -2074,7 +2074,7 @@ Naming/VariableName:
 
 Naming/VariableNumber:
   Description: 'Use the configured style when numbering variables.'
-  Enabled: false
+  Enabled: true
   VersionAdded: '0.50'
   EnforcedStyle: normalcase
   SupportedStyles:
