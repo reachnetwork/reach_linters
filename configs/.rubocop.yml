@@ -1796,7 +1796,7 @@ Metrics/CyclomaticComplexity:
   Description: >-
                  A complexity metric that is strongly correlated to the number
                  of test cases needed to validate a method.
-  Enabled: true
+  Enabled: false
   VersionAdded: '0.25'
   Max: 15
 
@@ -1829,7 +1829,7 @@ Metrics/PerceivedComplexity:
   Description: >-
                  A complexity metric geared towards measuring complexity for a
                  human reader.
-  Enabled: true
+  Enabled: false
   VersionAdded: '0.25'
   Max: 15
 
@@ -2074,7 +2074,7 @@ Naming/VariableName:
 
 Naming/VariableNumber:
   Description: 'Use the configured style when numbering variables.'
-  Enabled: true
+  Enabled: false
   VersionAdded: '0.50'
   EnforcedStyle: normalcase
   SupportedStyles:
