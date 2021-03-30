@@ -1482,6 +1482,10 @@ Lint/NumberConversion:
   VersionChanged: '0.70'
   SafeAutoCorrect: false
 
+Lint/NoReturnInBeginEndBlocks:
+  Enabled: true
+  VersionAdded: '1.2'
+
 Lint/OrderedMagicComments:
   Description: 'Checks the proper ordering of magic comments and whether a magic comment is not placed before a shebang.'
   Enabled: true
@@ -1671,6 +1675,9 @@ Lint/Syntax:
   Enabled: true
   VersionAdded: '0.9'
 
+Lint/ToEnumArguments:
+  Enabled: true
+  VersionAdded: '1.1'
 
 Lint/ToJSON:
   Description: 'Ensure #to_json includes an optional argument.'
@@ -1682,10 +1689,18 @@ Lint/UnderscorePrefixedVariableName:
   VersionAdded: '0.21'
   AllowKeywordBlockArguments: false
 
+Lint/UnexpectedBlockArity:
+  Enabled: true
+  VersionAdded: '1.5'
+
 Lint/UnifiedInteger:
   Description: 'Use Integer instead of Fixnum or Bignum.'
   Enabled: true
   VersionAdded: '0.43'
+
+Lint/UnmodifiedReduceAccumulator:
+  Enabled: true
+  VersionAdded: '1.1'
 
 Lint/UnreachableCode:
   Description: 'Unreachable code.'
@@ -2177,6 +2192,10 @@ Style/AndOr:
     - always
     - conditionals
 
+Style/ArgumentsForwarding:
+  Enabled: true
+  VersionAdded: '1.1'
+
 Style/ArrayJoin:
   Description: 'Use Array#join instead of Array#*.'
   StyleGuide: '#array-join'
@@ -2396,6 +2415,10 @@ Style/ClassVars:
   Enabled: true
   VersionAdded: '0.13'
 
+Style/CollectionCompact:
+  Enabled: true
+  VersionAdded: '1.2'
+
 # Align with the style guide.
 Style/CollectionMethods:
   Description: 'Preferred collection methods.'
@@ -2558,6 +2581,10 @@ Style/DocumentationMethod:
     - '/**/spec/**/*'
     - '/**/test/**/*'
   RequireForNonPublicMethods: false
+
+Style/DocumentDynamicEvalDefinition:
+  Enabled: true
+  VersionAdded: '1.1'
 
 Style/DoubleCopDisableDirective:
   Description: 'Checks for double rubocop:disable comments on a single line.'
@@ -3123,6 +3150,10 @@ Style/NegatedIf:
     - prefix
     - postfix
 
+Style/NegatedIfElseCondition:
+  Enabled: true
+  VersionAdded: '1.2'
+
 Style/NegatedUnless:
   Description: 'Favor if over unless for negative conditions.'
   StyleGuide: '#if-for-negatives'
@@ -3208,6 +3239,10 @@ Style/NilComparison:
   SupportedStyles:
     - predicate
     - comparison
+
+Style/NilLambda:
+  Enabled: true
+  VersionAdded: '1.3'
 
 Style/NonNilCheck:
   Description: 'Checks for redundant nil checks.'
@@ -3407,6 +3442,10 @@ Style/RandomWithOffset:
   StyleGuide: '#random-numbers'
   Enabled: true
   VersionAdded: '0.52'
+
+Style/RedundantArgument:
+  Enabled: true
+  VersionAdded: '1.4'
 
 Style/RedundantBegin:
   Description: "Don't use begin blocks when they are not needed."
@@ -3700,6 +3739,10 @@ Style/StructInheritance:
   StyleGuide: '#no-extend-struct-new'
   Enabled: true
   VersionAdded: '0.29'
+
+Style/SwapValues:
+  Enabled: true
+  VersionAdded: '1.1'
 
 Style/SymbolArray:
   Description: 'Use %i or %I for arrays of symbols.'
