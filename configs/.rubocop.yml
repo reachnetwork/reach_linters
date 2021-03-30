@@ -3289,6 +3289,12 @@ Style/OptionalArguments:
   Enabled: true
   VersionAdded: '0.33'
 
+Style/OptionalBooleanParameter:
+  Description: >-
+                 This cop checks for places where keyword arguments can be used instead of boolean arguments when defining methods. `respond_to_missing?` method is allowed by default. These are customizable with `AllowedMethods` option.
+  StyleGuide: '#optional-arguments'
+  Enabled: false
+
 Style/OrAssignment:
   Description: 'Recommend usage of double pipe equals (||=) where applicable.'
   StyleGuide: '#double-pipe-for-uninit'
