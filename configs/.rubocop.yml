@@ -2106,7 +2106,7 @@ Naming/VariableName:
 
 Naming/VariableNumber:
   Description: 'Use the configured style when numbering variables.'
-  Enabled: true
+  Enabled: false
   VersionAdded: '0.50'
   EnforcedStyle: snake_case
   SupportedStyles:
