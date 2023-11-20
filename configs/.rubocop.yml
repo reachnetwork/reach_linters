@@ -124,6 +124,13 @@ Bundler/OrderedGems:
 
 #################### Gemspec ###############################
 
+Gemspec/DateAssignment:
+  Description: 'Checks that `date =` is not used in gemspec file, it is set automatically when the gem is packaged.'
+  Enabled: false
+  VersionAdded: '1.10'
+  Include:
+    - '**/*.gemspec'
+
 Gemspec/DuplicatedAssignment:
   Description: 'An attribute assignment method calls should be listed only once in a gemspec.'
   Enabled: true
@@ -1040,6 +1047,12 @@ Layout/SpaceBeforeBlockBraces:
   Exclude:
     - '/**/spec/**/*'
 
+Layout/SpaceBeforeBrackets:
+  Description: 'Checks for receiver with a space before the opening brackets.'
+  StyleGuide: '#space-in-brackets-access'
+  Enabled: true
+  VersionAdded: '1.7'
+
 Layout/SpaceBeforeComma:
   Description: 'No spaces before commas.'
   Enabled: true
@@ -1133,7 +1146,6 @@ Layout/SpaceInsideHashLiteralBraces:
     - space
     - no_space
 
-
 Layout/SpaceInsideParens:
   Description: 'No spaces after ( or before ).'
   StyleGuide: '#spaces-braces'
@@ -1214,6 +1226,11 @@ Layout/TrailingWhitespace:
 #################### Lint ##################################
 ### Warnings
 
+Lint/AmbiguousAssignment:
+  Description: 'Checks for mistyped shorthand assignments.'
+  Enabled: true
+  VersionAdded: '1.7'
+
 Lint/AmbiguousBlockAssociation:
   Description: >-
                  Checks for ambiguous block association with method when param passed without
@@ -1269,6 +1286,34 @@ Lint/DeprecatedClassMethods:
   Description: 'Check for deprecated class method calls.'
   Enabled: true
   VersionAdded: '0.19'
+
+Lint/DeprecatedConstants:
+  Description: 'Checks for deprecated constants.'
+  Enabled: true
+  VersionAdded: '1.8'
+  # You can configure deprecated constants.
+  # If there is an alternative method, you can set alternative value as `Alternative`.
+  # And you can set the deprecated version as `DeprecatedVersion`.
+  # These options can be omitted if they are not needed.
+  #
+  # DeprecatedConstants:
+  #   'DEPRECATED_CONSTANT':
+  #     Alternative: 'alternative_value'
+  #     DeprecatedVersion: 'deprecated_version'
+  #
+  DeprecatedConstants:
+    'NIL':
+      Alternative: 'nil'
+      DeprecatedVersion: '2.4'
+    'TRUE':
+      Alternative: 'true'
+      DeprecatedVersion: '2.4'
+    'FALSE':
+      Alternative: 'false'
+      DeprecatedVersion: '2.4'
+    'Random::DEFAULT':
+      Alternative: 'Random.new'
+      DeprecatedVersion: '3.0'
 
 Lint/DisjunctiveAssignmentInConstructor:
   Description: 'In constructor, plain assignment is preferred over disjunctive.'
@@ -1408,6 +1453,11 @@ Lint/InterpolationCheck:
   Enabled: true
   VersionAdded: '0.50'
 
+Lint/LambdaWithoutLiteralBlock:
+  Description: 'Checks uses of lambda without a literal block.'
+  Enabled: false
+  VersionAdded: '1.8'
+
 Lint/LiteralAsCondition:
   Description: 'Checks of literals used in conditions.'
   Enabled: true
@@ -1482,6 +1532,17 @@ Lint/NumberConversion:
   VersionChanged: '0.70'
   SafeAutoCorrect: false
 
+Lint/NumberedParameterAssignment:
+  Description: 'Checks for uses of numbered parameter assignment.'
+  Enabled: true
+  VersionAdded: '1.9'
+
+Lint/OrAssignmentToConstant:
+  Description: 'Checks unintended or-assignment to constant.'
+  Enabled: false
+  Safe: false
+  VersionAdded: '1.9'
+
 Lint/NoReturnInBeginEndBlocks:
   Enabled: true
   VersionAdded: '1.2'
@@ -1536,6 +1597,11 @@ Lint/RedundantCopEnableDirective:
   Description: Checks for rubocop:enable comments that can be removed.
   Enabled: true
   VersionAdded: '0.76'
+
+Lint/RedundantDirGlobSort:
+  Description: 'Checks for redundant `sort` method to `Dir.glob` and `Dir[]`.'
+  Enabled: true
+  VersionAdded: '1.8'
 
 Lint/RedundantRequireStatement:
   Description: 'Checks for unnecessary `require` statement.'
@@ -1670,10 +1736,14 @@ Lint/SuppressedException:
   VersionAdded: '0.9'
   VersionChanged: '0.77'
 
-Lint/Syntax:
-  Description: 'Checks syntax error.'
+Lint/SymbolConversion:
+  Description: 'Checks for unnecessary symbol conversions.'
   Enabled: true
-  VersionAdded: '0.9'
+  VersionAdded: '1.9'
+  EnforcedStyle: consistent
+  SupportedStyles:
+    - strict
+    - consistent
 
 Lint/ToEnumArguments:
   Enabled: true
@@ -1682,6 +1752,11 @@ Lint/ToEnumArguments:
 Lint/ToJSON:
   Description: 'Ensure #to_json includes an optional argument.'
   Enabled: true
+
+Lint/TripleQuotes:
+  Description: 'Checks for useless triple quote constructs.'
+  Enabled: true
+  VersionAdded: '1.9'
 
 Lint/UnderscorePrefixedVariableName:
   Description: 'Do not use prefix `_` for a variable that is used.'
@@ -2671,6 +2746,17 @@ Style/EndBlock:
   Enabled: true
   VersionAdded: '0.9'
 
+Style/EndlessMethod:
+  Description: 'Avoid the use of multi-lined endless method definitions.'
+  StyleGuide: '#endless-methods'
+  Enabled: false
+  VersionAdded: '1.8'
+  EnforcedStyle: allow_single_line
+  SupportedStyles:
+    - allow_single_line
+    - allow_always
+    - disallow
+
 Style/EvalWithLocation:
   Description: 'Pass `__FILE__` and `__LINE__` to `eval` method, as they are used by backtraces.'
   Enabled: true
@@ -2784,12 +2870,26 @@ Style/GuardClause:
   # needs to have to trigger this cop
   MinBodyLength: 1
 
+Style/HashConversion:
+  Description: 'Avoid Hash[] in favor of ary.to_h or literal hashes.'
+  Enabled: true
+  VersionAdded: '1.10'
+  VersionChanged: '1.11'
+  AllowSplatArgument: true
+
 Style/HashEachMethods:
   Description: 'Use Hash#each_key and Hash#each_value.'
   StyleGuide: '#hash-each'
   Enabled: false
   VersionAdded: '0.80'
   Safe: false
+
+Style/HashExcept:
+  Description: >-
+                 Checks for usages of `Hash#reject`, `Hash#select`, and `Hash#filter` methods
+                 that can be replaced with `Hash#except` method.
+  Enabled: true
+  VersionAdded: '1.7'
 
 Style/HashSyntax:
   Description: >-
@@ -2852,6 +2952,14 @@ Style/IfUnlessModifierOfIfUnless:
                  Avoid modifier if/unless usage on conditionals.
   Enabled: true
   VersionAdded: '0.39'
+
+Style/IfWithBooleanLiteralBranches:
+  Description: 'Checks for redundant `if` with boolean literal branches.'
+  Enabled: true
+  VersionAdded: '1.9'
+  SafeAutoCorrect: false
+  AllowedMethods:
+    - nonzero?
 
 Style/IfWithSemicolon:
   Description: 'Do not use if x; .... Use the ternary operator instead.'
@@ -3277,7 +3385,6 @@ Style/NumericLiteralPrefix:
     - zero_with_o
     - zero_only
 
-
 Style/NumericLiterals:
   Description: >-
                  Add underscores to large numeric literals to improve their
@@ -3689,6 +3796,13 @@ Style/StderrPuts:
   StyleGuide: '#warn'
   Enabled: true
   VersionAdded: '0.51'
+
+Style/StringChars:
+  Description: 'Checks for uses of `String#split` with empty string or regexp literal argument.'
+  StyleGuide: '#string-chars'
+  Enabled: true
+  Safe: false
+  VersionAdded: '1.12'
 
 Style/StringHashKeys:
   Description: 'Prefer symbols instead of strings as hash keys.'
