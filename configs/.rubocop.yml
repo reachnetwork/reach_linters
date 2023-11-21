@@ -899,7 +899,6 @@ Layout/IndentationWidth:
   # Number of spaces for each indentation level.
   Width: 2
   AllowedPatterns: []
-  IgnoredPatterns: [] # deprecated
 
 Layout/InitialIndentation:
   Description: >-
@@ -957,7 +956,6 @@ Layout/LineLength:
   # elements. Strings will be converted to Regexp objects. A line that matches
   # any regular expression listed in this option will be ignored by LineLength.
   AllowedPatterns: []
-  IgnoredPatterns: [] # deprecated
 
 Layout/MultilineArrayBraceLayout:
   Description: >-
@@ -1514,7 +1512,6 @@ Lint/Debugger:
   Enabled: true
   VersionAdded: '0.14'
   VersionChanged: '1.10'
-  DebuggerReceivers: [] # deprecated
   DebuggerMethods:
     # Groups are available so that a specific group can be disabled in
     # a user's configuration, but are otherwise not significant.
@@ -2247,7 +2244,6 @@ Lint/UnreachableLoop:
     # RSpec uses `times` in its message expectations
     # eg. `exactly(2).times`
     - !ruby/regexp /(exactly|at_least|at_most)\(\d+\)\.times/
-  IgnoredPatterns: [] # deprecated
 
 Lint/UnusedBlockArgument:
   Description: 'Checks for unused block arguments.'
@@ -2356,7 +2352,6 @@ Metrics/BlockLength:
   CountComments: false  # count full line comments?
   Max: 25
   CountAsOne: []
-  ExcludedMethods: [] # deprecated, retained for backwards compatibility
   IgnoredMethods:
     # By default, exclude the `#refine` method, as it tends to have larger
     # associated blocks.
@@ -2402,7 +2397,6 @@ Metrics/MethodLength:
   CountComments: false  # count full line comments?
   Max: 25
   CountAsOne: []
-  ExcludedMethods: [] # deprecated, retained for backwards compatibility
   IgnoredMethods: []
 
 Metrics/ModuleLength:
@@ -2662,7 +2656,6 @@ Naming/MethodName:
   #     - '\A\s*onSelectionCleared\s*'
   #
   AllowedPatterns: []
-  IgnoredPatterns: [] # deprecated
 
 Naming/MethodParameterName:
   Description: >-
@@ -3911,7 +3904,6 @@ Style/MethodCallWithArgsParentheses:
   IgnoreMacros: true
   IgnoredMethods: []
   AllowedPatterns: []
-  IgnoredPatterns: [] # deprecated
   IncludedMacros: []
   AllowParenthesesInMultilineCall: false
   AllowParenthesesInChaining: false
